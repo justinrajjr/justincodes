@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    p.second{
+
+      background-color: green;
+    }
+    p.first{
+      background-color:darkred;
+      color: white;
+      width: 10%;
+      height: 50px;
+    }
+
+</style>
+</head>
+<body>
+<p class="first"  id="demo2"><span>Waiting for result..!</span></p>
+
+   <div class="container">
+  <h2><span style="color: green;">Lottery Event</span></h2>
+  <p>Click the below button for the winner </p>
+  <button onclick="randomitem();"  class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open The Box</button>
+
+ 
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+   
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Winner</h4>
+          <p class="second" id="demo1"></p>
+        </div>
+        <div class="modal-body">
+          <p>congratulation..Best wishes</p>
+        </div>
+
+        <div class="modal-footer">
+          <button onclick="" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  </div>
+
+
+     <script>
+      function randomitem(){
+         arr = [3029, 4532, 1389, 4377, 6798,2700,8954];
+         rand= Math.floor(Math.random()*arr.length);
+         items = arr[rand];
+        document.getElementById("demo1").innerHTML=items;
+           
+       document.getElementById("demo2").innerHTML=items;
+
+       console.log(items)
+     
+      }
+  </script>  
+
+</body>
+</html>
